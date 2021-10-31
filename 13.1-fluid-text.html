@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13.1 responsive topography = fluid text!</title>
+
+    <style>
+      .smartphone {
+        display: none;
+      }
+
+      .normal {
+        display: none;
+      }
+
+      .wide {
+        display: none;
+      }
+
+      /* base and smallest font size */
+      @media (max-width: 320px) {
+        h1 {
+          font-size: 25px;
+        }
+
+        .smartphone {
+          display: block;
+        }
+
+        .normal {
+          display: none;
+        }
+
+        .wide {
+          display: none;
+        }
+      }
+
+      /* fluid font from 320px upwards */
+      @media (min-width: 320px) {
+        h1 {
+          font-size: calc(25px + 2vw);
+        }
+
+        .smartphone {
+          display: none;
+        }
+
+        .normal {
+          display: block;
+        }
+
+        .wide {
+          display: none;
+        }
+      }
+
+      /* for screens larger than 1200px */
+      @media (min-width: 1200px) {
+        h1 {
+          font-size: 50px;
+        }
+
+        .wide {
+          display: block;
+        }
+
+        .normal {
+          display: none;
+        }
+
+        .smartphone {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Fluid Headline</h1>
+      <p class="smartphone">width smaller than 500 , minimum font size</p>
+      <p class="normal">width between 500 and 1200, font size is dynamic</p>
+      <p class="wide">width is above 1200, maximum font size</p>
+    </div>
+  </body>
+</html>
