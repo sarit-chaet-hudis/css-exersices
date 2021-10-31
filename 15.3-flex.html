@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-box 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .flex-cont {
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        height: 50vh;
+        background-color: grey;
+      }
+
+      .box {
+        width: 10vh;
+        height: 10vh;
+      }
+
+      .green {
+        background-color: springgreen;
+      }
+
+      .blue {
+        background-color: dodgerblue;
+      }
+
+      .red {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-cont">
+      <div class="box green">1</div>
+      <div class="box blue">2</div>
+      <div class="box red">3</div>
+    </div>
+  </body>
+</html>
