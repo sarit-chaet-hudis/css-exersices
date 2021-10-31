@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkslategrey;
+        }
+
+        .nav-bar {
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid yellowgreen;
+            background-color: palegoldenrod;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-menu {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+
+        .item {
+            padding: 3px 8px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        @media (max-width:530px) {
+            
+            .nav-bar {
+                flex-direction: column;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+            }
+
+            .item {
+                width: 90vw;
+            }
+
+            .logo {
+                width: 90vw;
+                
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">APPLESEEDS</div>
+        <div class="nav-menu">
+            <div class="item">HOME</div>
+            <div class="item">ABOUT</div>
+            <div class="item">PORTFOLIO</div>
+            <div class="item">CONTACT</div>
+        </div>
+    </div>
+</body>
+</html>
