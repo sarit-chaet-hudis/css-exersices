@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic tooltip usind attribute and pseudo element</title>
+    <style>
+      a {
+        position: relative;
+        font-style: normal;
+        text-decoration: none;
+        color: tomato;
+      }
+
+      a[data-tooltip]:hover::before {
+        content: attr(data-tooltip);
+        background-color: lightskyblue;
+        padding: 5px;
+        position: absolute;
+        top: -30px;
+        left: -2px;
+        color: black;
+        width: 200px;
+        border-radius: 10px;
+      }
+
+      a[data-tooltip]:hover::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left:0;
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 20px solid lightskyblue;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Boring Book with Latin Words</h1>
+    <div>
+      Lorem ipsum dolor sit amet consectetur
+      <a href="#" data-tooltip="in english: undergraduate">adipisicing</a> elit.
+      Molestias dolore doloremque accusamus labore quis cumque a rerum
+      blanditiis deleniti quisquam corrupti debitis, praesentium fuga nisi at?
+      Quam doloribus cum quas sunt explicabo, quaerat earum iste
+      <a href="#" data-tooltip="in english: pleasure">voluptas</a> ipsam
+      molestias in laboriosam animi voluptate cupiditate dolores beatae eum ea
+      consequatur eveniet commodi,
+      <a href="#" data-tooltip="in english: seasons">temporibus</a> alias porro?
+      Ab tempore harum eveniet quam inventore, mollitia cumque eaque! In
+      pariatur, deserunt libero quibusdam cum consectetur eveniet sequi ducimus
+      perspiciatis culpa recusandae iure explicabo cumque ut maxime voluptatem,
+      illo accusantium. Saepe praesentium amet ipsa error beatae quis animi cum
+      facilis quasi repudiandae mollitia at aliquam, necessitatibus accusantium.
+    </div>
+  </body>
+</html>
