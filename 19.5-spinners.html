@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spinners using keyframe css animation</title>
+    <style>
+      body {
+        background: #141414;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 80vh;
+      }
+      .cont {
+        display: flex;
+        align-items: center;
+      }
+
+      .spinner {
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        border-radius: 50%;
+      }
+
+      .spin-border {
+        width: 100px;
+        height: 100px;
+        border-top: grey solid 4px;
+        border-right: gray solid 4px;
+        border-bottom: grey solid 4px;
+        border-left: purple solid 4px;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spin-line {
+        border-top: grey solid 4px;
+        border-left: none;
+        border-right: rgb(0, 0, 0, 0) solid 4px;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+      }
+
+      .dots {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        position: relative;
+        justify-content: space-around;
+        align-items: flex-end;
+      }
+
+      .dot {
+        width: 15px;
+        height: 15px;
+        background-color: grey;
+        border-radius: 50%;
+      }
+
+      .change-color {
+        animation: 0.5s ease-in-out infinite alternate change-color;
+      }
+
+      .hop {
+        animation: 0.5s ease-out infinite alternate hop;
+      }
+
+      @keyframes change-color {
+        from {
+          background-color: grey;
+        }
+        to {
+          background-color: blueviolet;
+        }
+      }
+
+      @keyframes hop {
+        from {
+          transform: translateY(0);
+        }
+        to {
+            transform: translateY(-20px);
+        }
+      }
+
+      .delay1 {
+        animation-delay: 0.3s;
+      }
+
+      .delay2 {
+        animation-delay: 0.6s;
+      }
+
+      .dot.hop.delay1 {
+        left:20px;
+      }
+
+      .dot.hop.delay2 {
+        left:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="spinner spin-border"></div>
+      <div class="spinner spin-line"></div>
+      <div class="dots">
+        <div class="dot change-color"></div>
+        <div class="dot change-color delay1"></div>
+        <div class="dot change-color delay2"></div>
+      </div>
+      <div class="dots">
+        <div class="dot hop"></div>
+        <div class="dot hop delay1"></div>
+        <div class="dot hop delay2"></div>
+      </div>
+    </div>
+  </body>
+</html>
