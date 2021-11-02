@@ -54,6 +54,10 @@
         transition: all 1s ease-in;
       }
 
+      .translate:hover {
+        color: white;
+      }
+
       .translate::after {
         content: "";
         position: absolute;
@@ -61,20 +65,14 @@
         left: -150px;
         width: 100%;
         height: 100%;
-        transition: all 1s ease-in;
+        transition: all 0.5s ease-in;
         z-index: -20;
       }
 
       .translate:hover::after {
         transform: translateX(150px);
         background: black;
-
       }
-
-      .translate:hover {
-        color: white;
-      }
-
 
       .Rotate {
         position: relative;
@@ -95,11 +93,12 @@
       }
 
       .Rotate:hover::after {
-        transform-origin: top left;
+        
         transform: rotate(0deg);
       }
 
       .scale-opacity {
+          margin-top: 50px;
           flex-grow: 2;
           position: relative;
       }
