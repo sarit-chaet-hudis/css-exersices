@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: lightskyblue;
+}
+
+.grid {
+    display: grid;
+    width: 80vw;
+    min-height: 100vh;
+    grid-template-areas: 
+    "img1 img1 img2 img3 img4 img4"
+    "img5 img5 img5 img6 img6 img8"
+    "img5 img5 img5 img7 img9 img9"
+    "img10 img11 img11 img7 img9 img9"
+    "img12 img13 img13 img14 img14 img14"
+    
+    ;
+    gap: 1rem;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6 , .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14{
+    background-size: cover;
+    background-position: center;
+}
+
+.img1 {
+    grid-area: img1;
+    background-image: url("/grid-gallery/images/gal-1.jpeg");
+}
+
+.img2 {
+    grid-area: img2;
+    background-image: url("/grid-gallery/images/gal-2.jpeg");
+}
+
+.img3 {
+    grid-area: img3;
+    background-image: url("/grid-gallery/images/gal-3.jpeg");
+}
+
+.img4 {
+    grid-area: img4;
+    background-image: url("/grid-gallery/images/gal-4.jpeg");
+}
+
+.img5 {
+    grid-area: img5;
+    background-image: url("/grid-gallery/images/gal-5.jpeg");
+}
+
+.img6 {
+    grid-area: img6;
+    background-image: url("/grid-gallery/images/gal-6.jpeg");
+}
+
+.img7 {
+    grid-area: img7;
+    background-image: url("/grid-gallery/images/gal-7.jpeg");
+}
+
+.img8 {
+    grid-area: img8;
+    background-image: url("/grid-gallery/images/gal-8.jpeg");
+}
+.img9 {
+    grid-area: img9;
+    background-image: url("/grid-gallery/images/gal-9.jpeg");
+}
+.img10 {
+    grid-area: img10;
+    background-image: url("/grid-gallery/images/gal-10.jpeg");
+}
+.img11 {
+    grid-area: img11;
+    background-image: url("/grid-gallery/images/gal-11.jpeg");
+}
+.img12 {
+    grid-area: img12;
+    background-image: url("/grid-gallery/images/gal-12.jpeg");
+}
+.img13 {
+    grid-area: img13;
+    background-image: url("/grid-gallery/images/gal-13.jpeg");
+}
+.img14 {
+    grid-area: img14;
+    background-image: url("/grid-gallery/images/gal-14.jpeg");
+}
+
+@media  (max-width :500px) {
+    .grid {
+        display: grid;
+        width: 100vw;
+        /* grid-template-columns: auto;
+        grid-template-rows: auto; */
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+        "img7"
+        "img8"
+        "img9"
+        "img10"
+        "img11"
+        "img12"
+        "img13"
+        "img14"
+        ;
+        gap: 0.5rem;
+    }
+
+    .img1, .img2, .img3, .img4, .img5, .img6 , .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14{
+        min-height:200px;
+    }
+}
